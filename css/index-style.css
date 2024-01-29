@@ -1,0 +1,138 @@
+body
+{
+    background-color: black;
+    overflow: hidden;
+}
+:root
+{
+    --normal-foucs-color:#d99c39;
+    --normal-box-shadow-color:#fec26055;
+    --sucess-foucs-color:#198754;
+    --sucess-box-shadow-color:#19875440;
+    --falid-foucs-color:#dc3545;
+    --falid-box-shadow-color:#dc354540;
+
+}
+/* =============== Navigation Bar =============== */
+nav
+{
+    
+    width: 20%;
+    position: relative;
+}
+.fixed-left
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1030;
+}
+nav a:hover
+{
+    color: var(--main-color) !important;
+}
+i
+{
+    cursor: pointer;
+}
+#secondNav 
+{
+    width: 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1030;
+}
+/* ================ Home Images ================ */
+.images
+{
+    position: relative;
+    cursor: pointer;
+}
+.images .layer
+{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255,255,255,0.8);
+    transform: scaleY(0);
+    transform-origin:bottom ;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.images:hover .layer
+{
+    opacity: 1;
+    transform: scaleY(1);
+}
+.w-10
+{
+    width: 10%;
+}
+#mainNav ul li
+{
+    list-style: none;
+    position: relative;
+    top: 90px;
+}
+li
+{
+    list-style: none;
+}
+#mealDetails,#search,#category,#area,#ingredients,#contact
+{
+    display: none;
+    cursor: pointer;
+}
+.w-5
+{
+    width: 5%;
+}
+/* ================ Search By Name ================ */
+input
+{
+    background-color: transparent !important;
+    color: white !important;
+}
+input::placeholder
+{
+    color: white !important;
+}
+#contact input
+{
+    background-color: white !important;
+    color: black !important;
+}
+#contact input::placeholder
+{
+    color:  gray !important;
+}
+#contact p
+{
+    display: none;
+}
+#contact .form-control:focus
+{
+    border-color: var(--normal-foucs-color);
+    box-shadow: 0 0 0 0.25rem var(--normal-box-shadow-color);
+}
+#contact .form-control.is-invalid:focus
+{
+    border-color: var(--falid-foucs-color);
+    box-shadow: 0 0 0 0.25rem var(--falid-box-shadow-color);
+}
+#contact .is-valid:focus
+{
+    border-color: var(--sucess-foucs-color);
+    box-shadow: 0 0 0 0.25rem var(--sucess-box-shadow-color);
+}
+
+.loading
+{
+    position: fixed;
+    background-color: black;
+    inset: 0;
+    z-index: 999999999999;
+    display: flex;
+}
